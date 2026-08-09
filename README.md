@@ -15,7 +15,7 @@ The first start may take several minutes while packages install. **Do not close 
 
 ## Install on Linux
 
-1. Install Node.js 22 or newer and npm.
+1. Install Node.js 22 or newer and npm. https://nodesource.com/products/distributions 
 2. Open this repository's **Releases** tab.
 3. Download and extract `discord-custom-bot-linux-v1.0.0.tar.gz`.
 4. Open a terminal in the extracted folder.
