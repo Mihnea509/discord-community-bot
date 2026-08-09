@@ -22,6 +22,8 @@ Double-click **`Start Discord Custom Bot.bat`**.
 
 The launcher automatically installs the required packages the first time. If no token has been saved yet, it asks you to paste your Discord bot token. The token is saved only in a local `.env` file and will not be uploaded by Git because `.gitignore` excludes it.
 
+> **The first start can take several minutes** while the required packages are downloaded and installed. Do not close the window, press Ctrl+C, or stop the launcher during this process. Wait until it says that the bot has logged in or displays a clear error message.
+
 Keep the launcher window open while you want the bot online. Close it to stop the bot.
 
 After the first launch, starting Discord Custom Bot is always the same: double-click **`Start Discord Custom Bot.bat`**.
@@ -101,8 +103,10 @@ chmod +x start-discord-custom-bot.sh
 
 The launcher installs the required packages automatically on its first run. If no token is cached, it asks for one and stores it only in the ignored local `.env` file.
 
+> **The first start can take several minutes** while the required packages are downloaded and installed. Do not close the terminal, press Ctrl+C, or stop the script during this process. Wait until it says that the bot has logged in or displays a clear error message.
+
 After setup, run `./start-discord-custom-bot.sh` whenever you want to start Discord Custom Bot. For an always-on server or Raspberry Pi, a process manager such as PM2 can run `index.js`.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Discord Custom Bot is released under the [MIT License](LICENSE). This means you may use, copy, modify, and share the source code, including in your own projects. You must keep the original copyright and license notice with copies of the software. The software is provided without a warranty, so the author is not responsible if something goes wrong while using it.
