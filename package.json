@@ -1,8 +1,8 @@
 {
-  "name": "discord-community-bot",
+  "name": "discord-custom-bot",
   "version": "1.0.0",
   "type": "module",
-  "description": "A self-hosted Discord community and moderation bot with easy Windows and Linux launchers.",
+  "description": "Discord Custom Bot is a self-hosted moderation and community bot with easy Windows and Linux launchers.",
   "engines": {
     "node": ">=22"
   },

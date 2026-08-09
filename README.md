@@ -1,6 +1,6 @@
-# Discord Community Bot
+# Discord Custom Bot
 
-A self-hosted Discord community and moderation bot for Windows and Linux. It includes moderation, warnings, reaction roles, verification, welcome messages, tickets with transcripts, logging, channel controls, and DISBOARD bump reminders.
+Discord Custom Bot is a self-hosted moderation and community bot for Windows and Linux. It includes moderation, warnings, reaction roles, verification, welcome messages, tickets with transcripts, logging, channel controls, and DISBOARD bump reminders.
 
 This public edition has no web dashboard. Everything is managed safely through Discord commands.
 
@@ -12,19 +12,19 @@ Download and install the current **LTS** version from [nodejs.org](https://nodej
 
 ### 2. Download the bot
 
-Open the repository's **Releases** tab, choose the newest release, and download `discord-community-bot-windows-v1.0.0.zip`. Extract the ZIP and open the extracted folder.
+Open the repository's **Releases** tab, choose the newest release, and download `discord-custom-bot-windows-v1.0.0.zip`. Extract the ZIP and open the extracted folder.
 
 Do not use GitHub's **Code → Download ZIP** button if you only want the ready-to-run Windows package. The Releases ZIP already contains the correct Windows launcher.
 
 ### 3. Start it
 
-Double-click **`Start Bot.bat`**.
+Double-click **`Start Discord Custom Bot.bat`**.
 
 The launcher automatically installs the required packages the first time. If no token has been saved yet, it asks you to paste your Discord bot token. The token is saved only in a local `.env` file and will not be uploaded by Git because `.gitignore` excludes it.
 
 Keep the launcher window open while you want the bot online. Close it to stop the bot.
 
-After the first launch, starting the bot is always the same: double-click **`Start Bot.bat`**.
+After the first launch, starting Discord Custom Bot is always the same: double-click **`Start Discord Custom Bot.bat`**.
 
 ## Create and configure a Discord bot
 
@@ -62,7 +62,7 @@ git pull
 npm install --omit=dev
 ```
 
-Then double-click `Start Bot.bat` again.
+Then double-click `Start Discord Custom Bot.bat` again.
 
 ## Starting from a terminal
 
@@ -84,24 +84,24 @@ Back up `.env`, the runtime JSON files, and the `data` folder before replacing o
 ## Linux: easiest installation
 
 1. Install Node.js 22 or newer and npm using your distribution's package manager or [NodeSource](https://github.com/nodesource/distributions).
-2. Open the repository's **Releases** tab and download `discord-community-bot-linux-v1.0.0.tar.gz` from the newest release.
+2. Open the repository's **Releases** tab and download `discord-custom-bot-linux-v1.0.0.tar.gz` from the newest release.
 3. Extract the Linux archive.
 4. Open a terminal inside the extracted folder.
 5. Make the launcher executable once:
 
 ```bash
-chmod +x start-bot.sh
+chmod +x start-discord-custom-bot.sh
 ```
 
 6. Start the bot:
 
 ```bash
-./start-bot.sh
+./start-discord-custom-bot.sh
 ```
 
 The launcher installs the required packages automatically on its first run. If no token is cached, it asks for one and stores it only in the ignored local `.env` file.
 
-After setup, run `./start-bot.sh` whenever you want to start the bot. For an always-on server or Raspberry Pi, a process manager such as PM2 can run `index.js`.
+After setup, run `./start-discord-custom-bot.sh` whenever you want to start Discord Custom Bot. For an always-on server or Raspberry Pi, a process manager such as PM2 can run `index.js`.
 
 ## License
 

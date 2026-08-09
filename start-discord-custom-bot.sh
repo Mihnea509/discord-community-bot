@@ -23,7 +23,7 @@ if [ ! -f "node_modules/discord.js/package.json" ]; then
   }
 fi
 
-echo "Starting the Discord bot..."
+echo "Starting Discord Custom Bot..."
 echo "Press Ctrl+C to stop it."
 echo
 exec node index.js

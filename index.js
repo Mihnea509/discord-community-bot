@@ -13,7 +13,7 @@ dotenv.config();
 const appRoot = dirname(fileURLToPath(import.meta.url));
 const botInstance = String(process.env.BOT_INSTANCE ?? 'public').toLowerCase();
 if (!/^[a-z0-9-]+$/.test(botInstance)) throw new Error('BOT_INSTANCE may only contain letters, numbers, and hyphens.');
-const botName = process.env.BOT_NAME ?? (botInstance === 'avril' ? 'Avril' : 'Bot');
+const botName = process.env.BOT_NAME ?? (botInstance === 'avril' ? 'Avril' : 'Discord Custom Bot');
 // The default public installation stores data beside the app. Named extra instances are isolated.
 const dataRoot = botInstance === 'public' ? appRoot : join(appRoot, 'data', botInstance);
 await mkdir(dataRoot, { recursive: true });
@@ -1990,9 +1990,9 @@ if (!botToken) {
   }
 
   console.log('\nFirst-time setup');
-  console.log('Paste your Discord bot token below. It will only be stored in the local .env file, which Git ignores.');
+  console.log('Paste your Discord Custom Bot token below. It will only be stored in the local .env file, which Git ignores.');
   const prompt = createInterface({ input: process.stdin, output: process.stdout });
-  botToken = (await prompt.question('Discord bot token: ')).trim();
+  botToken = (await prompt.question('Discord Custom Bot token: ')).trim();
   prompt.close();
   if (!botToken || /[\r\n]/.test(botToken)) throw new Error('No valid token was entered.');
 

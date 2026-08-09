@@ -1,7 +1,7 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title Discord Bot
+title Discord Custom Bot
 
 where node >nul 2>nul
 if errorlevel 1 (
@@ -25,7 +25,7 @@ if not exist "node_modules\discord.js\package.json" (
   )
 )
 
-echo Starting the Discord bot...
+echo Starting Discord Custom Bot...
 echo Close this window or press Ctrl+C to stop it.
 echo.
 node index.js
