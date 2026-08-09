@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Installed packages and local npm cache
+node_modules/
+.npm-cache/
+
+# Runtime data created by the bot
+reaction-roles.json
+welcome-config.json
+command-restrictions.json
+hidden-channels.json
+warnings.json
+ticket-config.json
+tickets.json
+log-config.json
+moderation-state.json
+bump-config.json
+ticket-transcripts.json
+ticket-transcripts/
+data/
+
+# Logs and operating-system files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
