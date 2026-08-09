@@ -12,7 +12,9 @@ Download and install the current **LTS** version from [nodejs.org](https://nodej
 
 ### 2. Download the bot
 
-On GitHub, select **Code → Download ZIP**, extract the ZIP, and open the extracted folder.
+Open the repository's **Releases** tab, choose the newest release, and download `discord-community-bot-windows-v1.0.0.zip`. Extract the ZIP and open the extracted folder.
+
+Do not use GitHub's **Code → Download ZIP** button if you only want the ready-to-run Windows package. The Releases ZIP already contains the correct Windows launcher.
 
 ### 3. Start it
 
@@ -82,15 +84,16 @@ Back up `.env`, the runtime JSON files, and the `data` folder before replacing o
 ## Linux: easiest installation
 
 1. Install Node.js 22 or newer and npm using your distribution's package manager or [NodeSource](https://github.com/nodesource/distributions).
-2. Download and extract the Linux release.
-3. Open a terminal inside the extracted folder.
-4. Make the launcher executable once:
+2. Open the repository's **Releases** tab and download `discord-community-bot-linux-v1.0.0.tar.gz` from the newest release.
+3. Extract the Linux archive.
+4. Open a terminal inside the extracted folder.
+5. Make the launcher executable once:
 
 ```bash
 chmod +x start-bot.sh
 ```
 
-5. Start the bot:
+6. Start the bot:
 
 ```bash
 ./start-bot.sh
