@@ -1,112 +1,57 @@
 # Discord Custom Bot
 
-Discord Custom Bot is a self-hosted moderation and community bot for Windows and Linux. It includes moderation, warnings, reaction roles, verification, welcome messages, tickets with transcripts, logging, channel controls, and DISBOARD bump reminders.
+A self-hosted Discord moderation and community bot for Windows and Linux.
 
-This public edition has no web dashboard. Everything is managed safely through Discord commands.
+## Install on Windows
 
-## Windows: easiest installation
+1. Install the current **LTS** version of [Node.js](https://nodejs.org/).
+2. Open this repository's **Releases** tab.
+3. Download `discord-custom-bot-windows-v1.0.0.zip` from the newest release.
+4. Extract the ZIP.
+5. Double-click **`Start Discord Custom Bot.bat`**.
+6. Paste your Discord bot token when asked.
 
-### 1. Install Node.js
+The first start may take several minutes while packages install. **Do not close the window or stop it.** Wait for the login message or a clear error.
 
-Download and install the current **LTS** version from [nodejs.org](https://nodejs.org/). Keep the normal installation options enabled.
+## Install on Linux
 
-### 2. Download the bot
-
-Open the repository's **Releases** tab, choose the newest release, and download `discord-custom-bot-windows-v1.0.0.zip`. Extract the ZIP and open the extracted folder.
-
-Do not use GitHub's **Code → Download ZIP** button if you only want the ready-to-run Windows package. The Releases ZIP already contains the correct Windows launcher.
-
-### 3. Start it
-
-Double-click **`Start Discord Custom Bot.bat`**.
-
-The launcher automatically installs the required packages the first time. If no token has been saved yet, it asks you to paste your Discord bot token. The token is saved only in a local `.env` file and will not be uploaded by Git because `.gitignore` excludes it.
-
-> **The first start can take several minutes** while the required packages are downloaded and installed. Do not close the window, press Ctrl+C, or stop the launcher during this process. Wait until it says that the bot has logged in or displays a clear error message.
-
-Keep the launcher window open while you want the bot online. Close it to stop the bot.
-
-After the first launch, starting Discord Custom Bot is always the same: double-click **`Start Discord Custom Bot.bat`**.
-
-## Create and configure a Discord bot
-
-1. Open the [Discord Developer Portal](https://discord.com/developers/applications).
-2. Select **New Application** and choose a name.
-3. Open **Bot**, create the bot, and reset/copy its token.
-4. Under **Privileged Gateway Intents**, enable:
-   - **Server Members Intent**
-   - **Message Content Intent**
-5. Open **OAuth2 → URL Generator**.
-6. Select the `bot` scope.
-7. Give it the permissions required by the features you intend to use. Administrator is easiest for a private bot you control; carefully selected permissions are safer for a public deployment.
-8. Open the generated URL and invite the bot to your server.
-
-Never publish your token. If it is exposed anywhere, reset it immediately in the Developer Portal.
-
-## First command
-
-Once the launcher says `Logged in as ...`, use:
-
-```text
-!help
-```
-
-Administrators see the complete command list. Regular members only see commands they can use.
-
-## Updating
-
-If you downloaded a ZIP, download the newest ZIP and copy your existing `.env` file and runtime JSON files into the new folder.
-
-If you cloned with Git, stop the bot and run:
-
-```powershell
-git pull
-npm install --omit=dev
-```
-
-Then double-click `Start Discord Custom Bot.bat` again.
-
-## Starting from a terminal
-
-The launcher is optional. The equivalent commands are:
-
-```powershell
-npm install --omit=dev
-npm start
-```
-
-The first interactive start asks for a token if `.env` does not already contain one.
-
-## Local files
-
-The bot creates JSON files for server settings, warnings, tickets, reaction roles, and other runtime data. These files and `.env` are ignored by Git so one installation cannot accidentally publish private configuration.
-
-Back up `.env`, the runtime JSON files, and the `data` folder before replacing or moving an installation.
-
-## Linux: easiest installation
-
-1. Install Node.js 22 or newer and npm using your distribution's package manager or [NodeSource](https://github.com/nodesource/distributions).
-2. Open the repository's **Releases** tab and download `discord-custom-bot-linux-v1.0.0.tar.gz` from the newest release.
-3. Extract the Linux archive.
-4. Open a terminal inside the extracted folder.
-5. Make the launcher executable once:
+1. Install Node.js 22 or newer and npm.
+2. Open this repository's **Releases** tab.
+3. Download and extract `discord-custom-bot-linux-v1.0.0.tar.gz`.
+4. Open a terminal in the extracted folder.
+5. Run:
 
 ```bash
 chmod +x start-discord-custom-bot.sh
-```
-
-6. Start the bot:
-
-```bash
 ./start-discord-custom-bot.sh
 ```
 
-The launcher installs the required packages automatically on its first run. If no token is cached, it asks for one and stores it only in the ignored local `.env` file.
+6. Paste your Discord bot token when asked.
 
-> **The first start can take several minutes** while the required packages are downloaded and installed. Do not close the terminal, press Ctrl+C, or stop the script during this process. Wait until it says that the bot has logged in or displays a clear error message.
+The first start may take several minutes while packages install. **Do not close the terminal or stop it.** Wait for the login message or a clear error.
 
-After setup, run `./start-discord-custom-bot.sh` whenever you want to start Discord Custom Bot. For an always-on server or Raspberry Pi, a process manager such as PM2 can run `index.js`.
+## Discord setup
+
+In the [Discord Developer Portal](https://discord.com/developers/applications):
+
+1. Create an application and bot.
+2. Copy its token.
+3. Enable **Server Members Intent** and **Message Content Intent**.
+4. Use **OAuth2 → URL Generator** with the `bot` scope to invite it.
+
+Once it is online, run `!help` in your server.
+
+## Important
+
+- The web dashboard is not included.
+- Your token is stored locally in `.env` and ignored by Git.
+- Never upload or share `.env`.
+- Close the launcher window or press Ctrl+C to stop the bot.
+
+## Updating
+
+Download the newest release and keep a backup of your `.env` and runtime JSON files.
 
 ## License
 
-Discord Custom Bot is released under the [MIT License](LICENSE). This means you may use, copy, modify, and share the source code, including in your own projects. You must keep the original copyright and license notice with copies of the software. The software is provided without a warranty, so the author is not responsible if something goes wrong while using it.
+[MIT licensed](LICENSE): you may use, modify, and share the code as long as the copyright and license notice remain included. The software comes without a warranty.
