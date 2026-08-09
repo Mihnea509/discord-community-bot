@@ -37,7 +37,11 @@ In the [Discord Developer Portal](https://discord.com/developers/applications):
 1. Create an application and bot.
 2. Copy its token.
 3. Enable **Server Members Intent** and **Message Content Intent**.
-4. Use **OAuth2 → URL Generator** with the `bot` scope to invite it.
+4. Use **OAuth2 → URL Generator** with the `bot` scope.
+5. Enable the **Administrator** permission for the bot.
+6. Open the generated link to invite it to your server.
+
+Discord Custom Bot needs Administrator permission because its moderation, tickets, verification, reaction roles, and channel-management commands must manage roles, messages, and channel access.
 
 Once it is online, run `!help` in your server.
 
